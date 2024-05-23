@@ -10,7 +10,7 @@ export function Portfolio() {
             <div className="text-center text-[40px] md:text-3xl lg:text-5xl relative z-20 my-4 bg-gradient-to-r from-[#fff] to-[#00607A] bg-clip-text text-transparent font-bold">
                 See Our
                 <FlipWords words={words} />
-                Website that I've Build
+                Website that Ive Build
             </div>
             <div className="flex items-center justify-center gap-3">
                 <hr className="w-10" />
