@@ -14,8 +14,8 @@ export default function Home() {
         />
         <Hero />
         <AboutUs />
-        {/* <Portfolio /> */}
         <Testimoni />
+        <Portfolio />
       </div>
     </main>
   );

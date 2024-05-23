@@ -1,77 +1,105 @@
-import { cn } from "@/utils/cn";
-import React from "react";
-import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
-// import {
-//     IconArrowWaveRightUp,
-//     IconBoxAlignRightFilled,
-//     IconBoxAlignTopLeft,
-//     IconClipboardCopy,
-//     IconFileBroken,
-//     IconSignature,
-//     IconTableColumn,
-// } from "@tabler/icons-react";
+"use client";
+import React, { useState, useRef, useEffect } from "react";
+import { LayoutGrid } from "./ui/LayoutGrid";
+import { FlipWords } from "./ui/FlipWords";
 
 export function Portfolio() {
+    const words = ["Modern", "Amazing", "Beautiful"];
     return (
-        <BentoGrid className="max-w-4xl mx-auto">
-            {items.map((item, i) => (
-                <BentoGridItem
-                    key={i}
-                    title={item.title}
-                    description={item.description}
-                    header={item.header}
-                    // icon={item.icon}
-                    className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-                />
-            ))}
-        </BentoGrid>
+        <div className="h-screen py-20 w-full">
+            <div className="text-center text-[40px] md:text-3xl lg:text-5xl relative z-20 my-4 bg-gradient-to-r from-[#fff] to-[#00607A] bg-clip-text text-transparent font-bold">
+                See Our
+                <FlipWords words={words} />
+                Website that I've Build
+            </div>
+            <div className="flex items-center justify-center gap-3">
+                <hr className="w-10" />
+                <p className="text-sm text-white">Click each porto to see details project</p>
+                <hr className="w-10" />
+            </div>
+            <LayoutGrid cards={cards} />
+        </div>
     );
 }
-const Skeleton = () => (
-    <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
-);
-const items = [
+
+const SkeletonOne = () => {
+    return (
+        <div>
+            <p className="font-bold text-4xl text-white">House in the woods</p>
+            <p className="font-normal text-base text-white"></p>
+            <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+                A serene and tranquil retreat, this house in the woods offers a peaceful
+                escape from the hustle and bustle of city life.
+            </p>
+        </div>
+    );
+};
+
+const SkeletonTwo = () => {
+    return (
+        <div>
+            <p className="font-bold text-4xl text-white">House above the clouds</p>
+            <p className="font-normal text-base text-white"></p>
+            <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+                Perched high above the world, this house offers breathtaking views and a
+                unique living experience. It&apos;s a place where the sky meets home,
+                and tranquility is a way of life.
+            </p>
+        </div>
+    );
+};
+const SkeletonThree = () => {
+    return (
+        <div>
+            <p className="font-bold text-4xl text-white">Greens all over</p>
+            <p className="font-normal text-base text-white"></p>
+            <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+                A house surrounded by greenery and nature&apos;s beauty. It&apos;s the
+                perfect place to relax, unwind, and enjoy life.
+            </p>
+        </div>
+    );
+};
+const SkeletonFour = () => {
+    return (
+        <div>
+            <p className="font-bold text-4xl text-white">Rivers are serene</p>
+            <p className="font-normal text-base text-white"></p>
+            <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+                A house by the river is a place of peace and tranquility. It&apos;s the
+                perfect place to relax, unwind, and enjoy life.
+            </p>
+        </div>
+    );
+};
+
+const cards = [
     {
-        title: "The Dawn of Innovation",
-        description: "Explore the birth of groundbreaking ideas and inventions.",
-        header: <Skeleton />,
-        // icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+        id: 1,
+        content: <SkeletonOne />,
+        className: "md:col-span-2",
+        thumbnail:
+            "/images/portocontentone.png",
     },
     {
-        title: "The Digital Revolution",
-        description: "Dive into the transformative power of technology.",
-        header: <Skeleton />,
-        // icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+        id: 2,
+        content: <SkeletonTwo />,
+        className: "col-span-1",
+        thumbnail:
+            "/images/portocontenttwo.jpg",
     },
     {
-        title: "The Art of Design",
-        description: "Discover the beauty of thoughtful and functional design.",
-        header: <Skeleton />,
-        // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+        id: 3,
+        content: <SkeletonThree />,
+        className: "col-span-1",
+        thumbnail:
+            "/images/portocontentthree.png",
     },
     {
-        title: "The Power of Communication",
-        description:
-            "Understand the impact of effective communication in our lives.",
-        header: <Skeleton />,
-        // icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
-    },
-    {
-        title: "The Pursuit of Knowledge",
-        description: "Join the quest for understanding and enlightenment.",
-        header: <Skeleton />,
-        // icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
-    },
-    {
-        title: "The Joy of Creation",
-        description: "Experience the thrill of bringing ideas to life.",
-        header: <Skeleton />,
-        // icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
-    },
-    {
-        title: "The Spirit of Adventure",
-        description: "Embark on exciting journeys and thrilling discoveries.",
-        header: <Skeleton />,
-        // icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+        id: 4,
+        content: <SkeletonFour />,
+        className: "md:col-span-2",
+        thumbnail:
+            "/images/portocontentfour.png",
     },
 ];
