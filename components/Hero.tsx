@@ -4,7 +4,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect"
 
 const Hero = () => {
     return (
-        <div className="pt-36">
+        <div className="pt-10">
             <div className="h-screen flex justify-center relative z-0">
                 <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
                     {/* <h2 className="uppercase tracking-widest text-xs text-center text-white max-w-80">NEXA WEB DEVELOPMENT</h2> */}

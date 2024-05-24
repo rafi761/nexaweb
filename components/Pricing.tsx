@@ -64,10 +64,10 @@ export function Pricing() {
                 /> */}
                     <div className="flex justify-between">
                         <p className="text-lg sm:text-xl text-black mt-4 dark:text-neutral-200">
-                            BASIC
+                            STANDART
                         </p>
                         <p className="text-lg sm:text-xl text-black mt-4 dark:text-neutral-200">
-                            $15/<span className="text-sm">month</span>
+                            $30/<span className="text-sm">month</span>
                         </p>
                     </div>
 
@@ -92,7 +92,7 @@ export function Pricing() {
                             <FiCheckCircle size={40} /> <span>Responsive Design</span>
                         </p>
                         <p className="text-base text-neutral-600 dark:text-neutral-200 flex items-center gap-3">
-                            <FiCheckCircle size={40} /> <span>Max Delivery: 3 Days</span>
+                            <FiCheckCircle size={40} /> <span>Max Delivery: 5 Days</span>
                         </p>
                     </div>
                 </BackgroundGradient>
@@ -106,10 +106,10 @@ export function Pricing() {
                 /> */}
                     <div className="flex justify-between">
                         <p className="text-lg sm:text-xl text-black mt-4 dark:text-neutral-200">
-                            BASIC
+                            PREMIUM
                         </p>
                         <p className="text-lg sm:text-xl text-black mt-4 dark:text-neutral-200">
-                            $15/<span className="text-sm">month</span>
+                            $75/<span className="text-sm">month</span>
                         </p>
                     </div>
 
@@ -134,7 +134,7 @@ export function Pricing() {
                             <FiCheckCircle size={40} /> <span>Responsive Design</span>
                         </p>
                         <p className="text-base text-neutral-600 dark:text-neutral-200 flex items-center gap-3">
-                            <FiCheckCircle size={40} /> <span>Max Delivery: 3 Days</span>
+                            <FiCheckCircle size={40} /> <span>Max Delivery: 7 Days</span>
                         </p>
                     </div>
                 </BackgroundGradient>
